@@ -1,2 +1,0 @@
-# veterinariaPetHappy
-prueba1Git
