@@ -1,6 +1,6 @@
 package administrador;
 import Login.*;
-import Config.*;
+
 public class main extends javax.swing.JFrame {
 
     public main() {
@@ -30,6 +30,7 @@ public class main extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         btmRegistroMedicOtros = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -141,15 +142,23 @@ public class main extends javax.swing.JFrame {
 
         jPanel9.setBackground(new java.awt.Color(255, 153, 51));
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/logo veterinaria peluqueria (1).png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 602, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(jLabel5)
+                .addContainerGap(120, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
+                .addGap(60, 60, 60))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -185,7 +194,7 @@ public class main extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, -1));
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, 560));
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -289,9 +298,6 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_BtCerrarSeccionMouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        ConfigMain Configuracion =new ConfigMain();
-        Configuracion.setVisible(true);
-        this.setVisible(false);
 
     }//GEN-LAST:event_jLabel10MouseClicked
 
@@ -344,6 +350,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
