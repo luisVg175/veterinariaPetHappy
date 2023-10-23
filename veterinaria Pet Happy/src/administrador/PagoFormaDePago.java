@@ -1,5 +1,5 @@
 package administrador;
-
+import Config.*;
 import administrador.*;
 import Login.*;
 public class PagoFormaDePago extends javax.swing.JFrame {
@@ -202,7 +202,6 @@ public class PagoFormaDePago extends javax.swing.JFrame {
         comienzo.setVisible(true);
         this.setVisible(false);
 
-        // TODO add your handling code here:
     }//GEN-LAST:event_BtCerrarSeccionMouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked

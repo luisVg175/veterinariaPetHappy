@@ -1,6 +1,6 @@
 package administrador;
 
-
+import Config.ConfigMain;
 import Login.*;
 
 public class HistorialPagos extends javax.swing.JFrame {
@@ -300,11 +300,12 @@ public class HistorialPagos extends javax.swing.JFrame {
         comienzo.setVisible(true);
         this.setVisible(false);
 
-        // TODO add your handling code here:
     }//GEN-LAST:event_BtCerrarSeccionMouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-           // TODO add your handling code here:
+        ConfigMain Configuracion =new ConfigMain();
+        Configuracion.setVisible(true);
+        this.setVisible(false);        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void btmHistorialPagosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btmHistorialPagosMouseClicked

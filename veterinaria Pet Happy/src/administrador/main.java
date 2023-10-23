@@ -1,6 +1,6 @@
 package administrador;
+import Config.*;
 import Login.*;
-
 public class main extends javax.swing.JFrame {
 
     public main() {
@@ -292,12 +292,14 @@ public class main extends javax.swing.JFrame {
     private void BtCerrarSeccionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtCerrarSeccionMouseClicked
         LoginInicio comienzo = new LoginInicio();
         comienzo.setVisible(true);
-        this.setVisible(false);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_BtCerrarSeccionMouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        ConfigMain Configuracion =new ConfigMain();
+        Configuracion.setVisible(true);
+        this.setVisible(false);
 
     }//GEN-LAST:event_jLabel10MouseClicked
 
