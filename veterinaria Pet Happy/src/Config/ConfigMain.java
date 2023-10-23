@@ -1,6 +1,6 @@
 package Config;
 import administrador.*;
-import Login.*;
+//import Login.*;
 public class ConfigMain extends javax.swing.JFrame {
 
     public ConfigMain() {
@@ -226,9 +226,9 @@ public class ConfigMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtCerrarSeccionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtCerrarSeccionMouseClicked
-        LoginInicio comienzo = new LoginInicio();
-        comienzo.setVisible(true);
-        this.setVisible(false);
+        //LoginInicio comienzo = new LoginInicio();
+        //comienzo.setVisible(true);
+        //this.setVisible(false);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_BtCerrarSeccionMouseClicked

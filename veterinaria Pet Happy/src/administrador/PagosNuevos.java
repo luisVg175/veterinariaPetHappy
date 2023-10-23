@@ -1,6 +1,8 @@
 package administrador;
 import Config.ConfigMain;
 import Login.*;
+import javax.swing.JOptionPane;
+
 public class PagosNuevos extends javax.swing.JFrame {
 
     public PagosNuevos() {
@@ -30,19 +32,29 @@ public class PagosNuevos extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         btmRegistroMedicOtros = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnPagar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        boxResutado = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        txtNombreDueno = new javax.swing.JTextField();
+        txtNombreMascota = new javax.swing.JTextField();
+        txtPesoM = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        btmTipTratamiento = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
+        btmBorrar = new javax.swing.JButton();
+        txtEdadMascota = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        txtEspecieM = new javax.swing.JTextField();
+        btmOkPagos = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        txtGenero = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        boxPrescripcion = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -155,38 +167,89 @@ public class PagosNuevos extends javax.swing.JFrame {
         jPanel9.setBackground(new java.awt.Color(255, 153, 51));
         jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Pagar");
-        jPanel9.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 340, -1, -1));
+        btnPagar.setText("Pagar");
+        btnPagar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPagarActionPerformed(evt);
+            }
+        });
+        jPanel9.add(btnPagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, -1, 30));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        boxResutado.setColumns(20);
+        boxResutado.setLineWrap(true);
+        boxResutado.setRows(5);
+        boxResutado.setWrapStyleWord(true);
+        boxResutado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Reseta medica del Paciente:", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP));
+        jScrollPane1.setViewportView(boxResutado);
 
-        jPanel9.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 277, 325));
+        jPanel9.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 277, 410));
 
-        jLabel5.setText("Nombre de la Mascota:");
-        jPanel9.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 117, -1, -1));
+        jLabel5.setText("Nombre del paciente:");
+        jPanel9.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jLabel6.setText("Nombre del Dueño");
-        jPanel9.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 77, -1, -1));
-        jPanel9.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 74, 150, -1));
-        jPanel9.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 114, 145, -1));
-        jPanel9.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 154, 150, -1));
+        jPanel9.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
-        jLabel7.setText("Tratamiento");
-        jPanel9.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 157, -1, -1));
+        txtNombreDueno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreDuenoActionPerformed(evt);
+            }
+        });
+        jPanel9.add(txtNombreDueno, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 22, 150, 30));
+        jPanel9.add(txtNombreMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 62, 150, 30));
+        jPanel9.add(txtPesoM, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 142, 150, 30));
 
-        jButton2.setText("ok");
-        jPanel9.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, -1, -1));
+        jLabel7.setText("Peso del paciente:");
+        jPanel9.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
 
-        jButton3.setText("Borrar");
-        jPanel9.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, -1, -1));
+        btmTipTratamiento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pastillas", "Inyeccion", "Medicamentos" }));
+        jPanel9.add(btmTipTratamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 150, 30));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel9.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, -1, -1));
+        jLabel8.setText("Genero  del paciente:");
+        jPanel9.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 120, 20));
 
-        jLabel8.setText("Cantidad");
-        jPanel9.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 197, -1, -1));
+        btmBorrar.setText("Borrar");
+        btmBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmBorrarActionPerformed(evt);
+            }
+        });
+        jPanel9.add(btmBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, -1, 30));
+        jPanel9.add(txtEdadMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 70, 30));
+
+        jLabel9.setText("Edad del paciente:");
+        jPanel9.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+
+        jLabel11.setText("Especie del paciente:");
+        jPanel9.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
+        jPanel9.add(txtEspecieM, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 150, 30));
+
+        btmOkPagos.setText("Agregar");
+        btmOkPagos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmOkPagosActionPerformed(evt);
+            }
+        });
+        jPanel9.add(btmOkPagos, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 440, -1, 30));
+
+        jLabel12.setText("Años");
+        jPanel9.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 30, 30));
+
+        jLabel13.setText("Kg");
+        jPanel9.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 20, 20));
+
+        jLabel14.setText("Tipo de tratamiento:");
+        jPanel9.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
+        jPanel9.add(txtGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 150, 30));
+
+        boxPrescripcion.setColumns(20);
+        boxPrescripcion.setLineWrap(true);
+        boxPrescripcion.setRows(5);
+        boxPrescripcion.setWrapStyleWord(true);
+        boxPrescripcion.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Prescripcion", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP));
+        jScrollPane2.setViewportView(boxPrescripcion);
+
+        jPanel9.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 250, 120));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -195,7 +258,7 @@ public class PagosNuevos extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 629, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -206,23 +269,22 @@ public class PagosNuevos extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, -1));
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, 500));
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -318,7 +380,6 @@ public class PagosNuevos extends javax.swing.JFrame {
         comienzo.setVisible(true);
         this.setVisible(false);
 
-        // TODO add your handling code here:
     }//GEN-LAST:event_BtCerrarSeccionMouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
@@ -326,6 +387,22 @@ public class PagosNuevos extends javax.swing.JFrame {
         Configuracion.setVisible(true);
         this.setVisible(false);        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void txtNombreDuenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreDuenoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreDuenoActionPerformed
+
+    private void btmOkPagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmOkPagosActionPerformed
+        Trascribir();
+    }//GEN-LAST:event_btmOkPagosActionPerformed
+
+    private void btmBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBorrarActionPerformed
+        borrar();
+    }//GEN-LAST:event_btmBorrarActionPerformed
+
+    private void btnPagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPagarActionPerformed
+        pago();
+    }//GEN-LAST:event_btnPagarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -379,16 +456,22 @@ public class PagosNuevos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BtCerrarSeccion;
+    private javax.swing.JTextArea boxPrescripcion;
+    private javax.swing.JTextArea boxResutado;
+    private javax.swing.JButton btmBorrar;
     private javax.swing.JLabel btmHistorialPagos;
+    private javax.swing.JButton btmOkPagos;
     private javax.swing.JLabel btmPacientes;
     private javax.swing.JLabel btmPagos;
     private javax.swing.JLabel btmRegistroMedicOtros;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> btmTipTratamiento;
+    private javax.swing.JButton btnPagar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -396,6 +479,7 @@ public class PagosNuevos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -405,9 +489,73 @@ public class PagosNuevos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField txtEdadMascota;
+    private javax.swing.JTextField txtEspecieM;
+    private javax.swing.JTextField txtGenero;
+    private javax.swing.JTextField txtNombreDueno;
+    private javax.swing.JTextField txtNombreMascota;
+    private javax.swing.JTextField txtPesoM;
     // End of variables declaration//GEN-END:variables
+
+    
+    String vacio="";
+    private void Trascribir() {
+        boxResutado.setText(vacio);
+        String NombreD,NombreM, edadM, pesoM, especieM, generoM, tratamiento,Detalles;
+        
+        NombreD= txtNombreDueno.getText();
+        NombreM=txtNombreMascota.getText();
+        edadM=txtEdadMascota.getText();
+        pesoM= txtPesoM.getText();
+        especieM=txtEspecieM.getText();
+        generoM=txtGenero.getText();
+        tratamiento=btmTipTratamiento.getSelectedItem().toString();
+        Detalles=boxPrescripcion.getText();
+        boxResutado.append("------------------------------------------------ \n");
+        
+        boxResutado.append("Nombre del dueño: ");
+        boxResutado.append(NombreD+"\n");
+        //----------------------------------------------
+        boxResutado.append("Nombre del paciente: ");
+        boxResutado.append(NombreM+"\n");
+        //----------------------------------------------
+        boxResutado.append("Edad del paciente: ");
+        boxResutado.append(edadM+" años\n");
+        //----------------------------------------------
+        boxResutado.append("peso del paciente: ");
+        boxResutado.append(pesoM+"kg \n");
+        //----------------------------------------------
+        boxResutado.append("especie del paciente: ");
+        boxResutado.append(especieM+"\n");
+        //----------------------------------------------
+        boxResutado.append("Genero del paciente: ");
+        boxResutado.append(generoM+"\n");
+        //----------------------------------------------
+        boxResutado.append("Tipo de tratamiento: ");
+        boxResutado.append(tratamiento+"\n");
+        
+        boxResutado.append("------------------------------------------------ \n");
+        boxResutado.append(Detalles+"\n");
+        boxResutado.append("------------------------------------------------ \n");
+        
+    }
+
+    private void borrar() {
+        txtNombreDueno.setText(vacio);
+        txtEdadMascota.setText(vacio);
+        txtEspecieM.setText(vacio);
+        txtGenero.setText(vacio);
+        txtNombreMascota.setText(vacio);
+        txtPesoM.setText(vacio);
+        boxPrescripcion.setText(vacio);
+        boxResutado.setText(vacio);
+    }
+
+    private void pago() {
+        PagoFormaDePago a1= new PagoFormaDePago();
+        a1.setVisible(true);
+        this.setVisible(false);
+        
+    }
 }
